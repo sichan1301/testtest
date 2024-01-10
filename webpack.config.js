@@ -1,6 +1,8 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode:'development',
   entry: {
     main: './src/index.tsx'
   },
@@ -18,5 +20,6 @@ module.exports = {
         loader: 'babel-loader'
       }
     ]
-  }
+  },
+  plugins: [new HtmlWebpackPlugin()],
 }
